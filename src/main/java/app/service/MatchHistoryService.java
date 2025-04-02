@@ -38,9 +38,11 @@ public class MatchHistoryService {
 
         matchHistoryRepository.save(matchHistory);
 
-            return matchHistory;
+        return matchHistory;
     }
 
+
     public List<MatchHistory> getHistoryByUserId(UUID userId) {
-        return matchHistoryRepository.findTop6ByUserIdOrderByCreatedAtDesc(userId);    }
+        return matchHistoryRepository.findTop6ByUserIdOrderByCreatedAtDesc(userId);
+    }
 }
